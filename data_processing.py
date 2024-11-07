@@ -1,15 +1,4 @@
-import csv
-import os
-
-# class City:
-#     def __init__(self, city, country, temperature, latitude):
-#         self.city = city
-#         self.country = country
-#         self.temperature = float(temperature)
-#         self.latitude = float(latitude)
-
-#     def __repr__(self):
-#         return f"City(city={self.city}, country={self.country}, temperature={self.temperature}, latitude={self.latitude})"
+import csv, os
 
 class CityData:
     def __init__(self, cities, countries):
@@ -74,7 +63,6 @@ with open(os.path.join(__location__, 'Countries.csv')) as f:
         countries.append(dict(r))
 
 city_data = CityData(cities, countries)
-
 
 # Print the average temperature of all cities
 print("The average temperature of all the cities:")
